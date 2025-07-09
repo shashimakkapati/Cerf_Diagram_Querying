@@ -1,0 +1,902 @@
+<CustomFilterDefinitions>
+  <CustomProxyDefinition name="tube_2dim" group="filters">
+    <CompoundSourceProxy id="27339" servers="1">
+      <Proxy group="filters" type="Calculator" id="23870" servers="1" compound_name="Calculator1">
+        <Property name="AttributeType" id="23870.AttributeType" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="23870.AttributeType.enum">
+            <Entry value="0" text="Point Data"/>
+            <Entry value="1" text="Cell Data"/>
+          </Domain>
+        </Property>
+        <Property name="CoordinateResults" id="23870.CoordinateResults" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="23870.CoordinateResults.bool"/>
+        </Property>
+        <Property name="Function" id="23870.Function" number_of_elements="1">
+          <Element index="0" value="coordsX/2.962"/>
+        </Property>
+        <Property name="FunctionParserType" id="23870.FunctionParserType" number_of_elements="1">
+          <Element index="0" value="1"/>
+        </Property>
+        <Property name="Input" id="23870.Input" number_of_elements="1">
+          <Proxy value="23625" output_port="0"/>
+          <Domain name="groups" id="23870.Input.groups"/>
+          <Domain name="input_array" id="23870.Input.input_array"/>
+          <Domain name="input_type" id="23870.Input.input_type"/>
+        </Property>
+        <Property name="ReplaceInvalidValues" id="23870.ReplaceInvalidValues" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="23870.ReplaceInvalidValues.bool"/>
+        </Property>
+        <Property name="ReplacementValue" id="23870.ReplacementValue" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="range" id="23870.ReplacementValue.range"/>
+        </Property>
+        <Property name="ResultArrayName" id="23870.ResultArrayName" number_of_elements="1">
+          <Element index="0" value="Result"/>
+        </Property>
+        <Property name="ResultArrayType" id="23870.ResultArrayType" number_of_elements="1">
+          <Element index="0" value="11"/>
+          <Domain name="enum" id="23870.ResultArrayType.enum">
+            <Entry value="2" text="Char"/>
+            <Entry value="15" text="Signed Char"/>
+            <Entry value="3" text="Unsigned Char"/>
+            <Entry value="4" text="Short"/>
+            <Entry value="5" text="Unsigned Short"/>
+            <Entry value="6" text="Int"/>
+            <Entry value="7" text="Unsigned Int"/>
+            <Entry value="8" text="Long"/>
+            <Entry value="9" text="Unsigned Long"/>
+            <Entry value="10" text="Float"/>
+            <Entry value="11" text="Double"/>
+            <Entry value="12" text="Id Type"/>
+          </Domain>
+        </Property>
+        <Property name="ResultNormals" id="23870.ResultNormals" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="23870.ResultNormals.bool"/>
+        </Property>
+        <Property name="ResultTCoords" id="23870.ResultTCoords" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="23870.ResultTCoords.bool"/>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="DataSetSurfaceFilter" id="25896" servers="1" compound_name="ExtractSurface1">
+        <Property name="FastMode" id="25896.FastMode" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="25896.FastMode.bool"/>
+        </Property>
+        <Property name="Input" id="25896.Input" number_of_elements="1">
+          <Proxy value="25128" output_port="0"/>
+          <Domain name="groups" id="25896.Input.groups"/>
+          <Domain name="input_type" id="25896.Input.input_type"/>
+        </Property>
+        <Property name="NonlinearSubdivisionLevel" id="25896.NonlinearSubdivisionLevel" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="range" id="25896.NonlinearSubdivisionLevel.range"/>
+        </Property>
+        <Property name="PieceInvariant" id="25896.PieceInvariant" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="25896.PieceInvariant.bool"/>
+        </Property>
+        <Property name="RemoveGhostInterfaces" id="25896.RemoveGhostInterfaces" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="25896.RemoveGhostInterfaces.bool"/>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="DataSetSurfaceFilter" id="26135" servers="1" compound_name="ExtractSurface2">
+        <Property name="FastMode" id="26135.FastMode" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="26135.FastMode.bool"/>
+        </Property>
+        <Property name="Input" id="26135.Input" number_of_elements="1">
+          <Proxy value="25383" output_port="0"/>
+          <Domain name="groups" id="26135.Input.groups"/>
+          <Domain name="input_type" id="26135.Input.input_type"/>
+        </Property>
+        <Property name="NonlinearSubdivisionLevel" id="26135.NonlinearSubdivisionLevel" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="range" id="26135.NonlinearSubdivisionLevel.range"/>
+        </Property>
+        <Property name="PieceInvariant" id="26135.PieceInvariant" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="26135.PieceInvariant.bool"/>
+        </Property>
+        <Property name="RemoveGhostInterfaces" id="26135.RemoveGhostInterfaces" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="26135.RemoveGhostInterfaces.bool"/>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="DataSetSurfaceFilter" id="26374" servers="1" compound_name="ExtractSurface3">
+        <Property name="FastMode" id="26374.FastMode" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="26374.FastMode.bool"/>
+        </Property>
+        <Property name="Input" id="26374.Input" number_of_elements="1">
+          <Proxy value="25638" output_port="0"/>
+          <Domain name="groups" id="26374.Input.groups"/>
+          <Domain name="input_type" id="26374.Input.input_type"/>
+        </Property>
+        <Property name="NonlinearSubdivisionLevel" id="26374.NonlinearSubdivisionLevel" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="range" id="26374.NonlinearSubdivisionLevel.range"/>
+        </Property>
+        <Property name="PieceInvariant" id="26374.PieceInvariant" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="26374.PieceInvariant.bool"/>
+        </Property>
+        <Property name="RemoveGhostInterfaces" id="26374.RemoveGhostInterfaces" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="26374.RemoveGhostInterfaces.bool"/>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="Threshold" id="25638" servers="1" compound_name="Maximum">
+        <Property name="AllScalars" id="25638.AllScalars" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="25638.AllScalars.bool"/>
+        </Property>
+        <Property name="ComponentMode" id="25638.ComponentMode" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="25638.ComponentMode.enum">
+            <Entry value="0" text="Selected"/>
+            <Entry value="1" text="All"/>
+            <Entry value="2" text="Any"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="25638.Input" number_of_elements="1">
+          <Proxy value="24873" output_port="0"/>
+          <Domain name="groups" id="25638.Input.groups"/>
+          <Domain name="input_array" id="25638.Input.input_array"/>
+          <Domain name="input_type" id="25638.Input.input_type"/>
+        </Property>
+        <Property name="Invert" id="25638.Invert" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="25638.Invert.bool"/>
+        </Property>
+        <Property name="LowerThreshold" id="25638.LowerThreshold" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="range" id="25638.LowerThreshold.range"/>
+        </Property>
+        <Property name="MemoryStrategy" id="25638.MemoryStrategy" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="25638.MemoryStrategy.enum">
+            <Entry value="0" text="Mask Input"/>
+            <Entry value="1" text="Regenerate Trees And Index Fields"/>
+            <Entry value="2" text="New HyperTreeGrid"/>
+          </Domain>
+        </Property>
+        <Property name="SelectInputScalars" id="25638.SelectInputScalars" number_of_elements="5">
+          <Element index="0" value="0"/>
+          <Element index="1" value="0"/>
+          <Element index="2" value="0"/>
+          <Element index="3" value="1"/>
+          <Element index="4" value="Type"/>
+          <Domain name="array_list" id="25638.SelectInputScalars.array_list">
+            <String text="Result"/>
+            <String text="Type"/>
+            <String text="xcoordinates"/>
+            <String text="ycoordinates"/>
+            <String text="zcoordinates"/>
+          </Domain>
+        </Property>
+        <Property name="SelectedComponent" id="25638.SelectedComponent" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="comps" id="25638.SelectedComponent.comps">
+            <Entry value="0" text=""/>
+          </Domain>
+        </Property>
+        <Property name="ThresholdMethod" id="25638.ThresholdMethod" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="25638.ThresholdMethod.enum">
+            <Entry value="0" text="Between"/>
+            <Entry value="1" text="Below Lower Threshold"/>
+            <Entry value="2" text="Above Upper Threshold"/>
+          </Domain>
+        </Property>
+        <Property name="UpperThreshold" id="25638.UpperThreshold" number_of_elements="1">
+          <Element index="0" value="2"/>
+          <Domain name="range" id="25638.UpperThreshold.range"/>
+        </Property>
+        <Property name="UseContinuousCellRange" id="25638.UseContinuousCellRange" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="25638.UseContinuousCellRange.bool"/>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="Threshold" id="25128" servers="1" compound_name="Minimum">
+        <Property name="AllScalars" id="25128.AllScalars" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="25128.AllScalars.bool"/>
+        </Property>
+        <Property name="ComponentMode" id="25128.ComponentMode" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="25128.ComponentMode.enum">
+            <Entry value="0" text="Selected"/>
+            <Entry value="1" text="All"/>
+            <Entry value="2" text="Any"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="25128.Input" number_of_elements="1">
+          <Proxy value="24873" output_port="0"/>
+          <Domain name="groups" id="25128.Input.groups"/>
+          <Domain name="input_array" id="25128.Input.input_array"/>
+          <Domain name="input_type" id="25128.Input.input_type"/>
+        </Property>
+        <Property name="Invert" id="25128.Invert" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="25128.Invert.bool"/>
+        </Property>
+        <Property name="LowerThreshold" id="25128.LowerThreshold" number_of_elements="1">
+          <Element index="0" value="0.6666666666666666"/>
+          <Domain name="range" id="25128.LowerThreshold.range"/>
+        </Property>
+        <Property name="MemoryStrategy" id="25128.MemoryStrategy" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="25128.MemoryStrategy.enum">
+            <Entry value="0" text="Mask Input"/>
+            <Entry value="1" text="Regenerate Trees And Index Fields"/>
+            <Entry value="2" text="New HyperTreeGrid"/>
+          </Domain>
+        </Property>
+        <Property name="SelectInputScalars" id="25128.SelectInputScalars" number_of_elements="5">
+          <Element index="0" value="0"/>
+          <Element index="1" value="0"/>
+          <Element index="2" value="0"/>
+          <Element index="3" value="1"/>
+          <Element index="4" value="Type"/>
+          <Domain name="array_list" id="25128.SelectInputScalars.array_list">
+            <String text="Result"/>
+            <String text="Type"/>
+            <String text="xcoordinates"/>
+            <String text="ycoordinates"/>
+            <String text="zcoordinates"/>
+          </Domain>
+        </Property>
+        <Property name="SelectedComponent" id="25128.SelectedComponent" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="comps" id="25128.SelectedComponent.comps">
+            <Entry value="0" text=""/>
+          </Domain>
+        </Property>
+        <Property name="ThresholdMethod" id="25128.ThresholdMethod" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="25128.ThresholdMethod.enum">
+            <Entry value="0" text="Between"/>
+            <Entry value="1" text="Below Lower Threshold"/>
+            <Entry value="2" text="Above Upper Threshold"/>
+          </Domain>
+        </Property>
+        <Property name="UpperThreshold" id="25128.UpperThreshold" number_of_elements="1">
+          <Element index="0" value="0.6666666666666666"/>
+          <Domain name="range" id="25128.UpperThreshold.range"/>
+        </Property>
+        <Property name="UseContinuousCellRange" id="25128.UseContinuousCellRange" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="25128.UseContinuousCellRange.bool"/>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="Threshold" id="25383" servers="1" compound_name="Saddle1">
+        <Property name="AllScalars" id="25383.AllScalars" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="25383.AllScalars.bool"/>
+        </Property>
+        <Property name="ComponentMode" id="25383.ComponentMode" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="25383.ComponentMode.enum">
+            <Entry value="0" text="Selected"/>
+            <Entry value="1" text="All"/>
+            <Entry value="2" text="Any"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="25383.Input" number_of_elements="1">
+          <Proxy value="24873" output_port="0"/>
+          <Domain name="groups" id="25383.Input.groups"/>
+          <Domain name="input_array" id="25383.Input.input_array"/>
+          <Domain name="input_type" id="25383.Input.input_type"/>
+        </Property>
+        <Property name="Invert" id="25383.Invert" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="25383.Invert.bool"/>
+        </Property>
+        <Property name="LowerThreshold" id="25383.LowerThreshold" number_of_elements="1">
+          <Element index="0" value="1.3333333333333333"/>
+          <Domain name="range" id="25383.LowerThreshold.range"/>
+        </Property>
+        <Property name="MemoryStrategy" id="25383.MemoryStrategy" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="25383.MemoryStrategy.enum">
+            <Entry value="0" text="Mask Input"/>
+            <Entry value="1" text="Regenerate Trees And Index Fields"/>
+            <Entry value="2" text="New HyperTreeGrid"/>
+          </Domain>
+        </Property>
+        <Property name="SelectInputScalars" id="25383.SelectInputScalars" number_of_elements="5">
+          <Element index="0" value="0"/>
+          <Element index="1" value="0"/>
+          <Element index="2" value="0"/>
+          <Element index="3" value="1"/>
+          <Element index="4" value="Type"/>
+          <Domain name="array_list" id="25383.SelectInputScalars.array_list">
+            <String text="Result"/>
+            <String text="Type"/>
+            <String text="xcoordinates"/>
+            <String text="ycoordinates"/>
+            <String text="zcoordinates"/>
+          </Domain>
+        </Property>
+        <Property name="SelectedComponent" id="25383.SelectedComponent" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="comps" id="25383.SelectedComponent.comps">
+            <Entry value="0" text=""/>
+          </Domain>
+        </Property>
+        <Property name="ThresholdMethod" id="25383.ThresholdMethod" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="25383.ThresholdMethod.enum">
+            <Entry value="0" text="Between"/>
+            <Entry value="1" text="Below Lower Threshold"/>
+            <Entry value="2" text="Above Upper Threshold"/>
+          </Domain>
+        </Property>
+        <Property name="UpperThreshold" id="25383.UpperThreshold" number_of_elements="1">
+          <Element index="0" value="1.3333333333333333"/>
+          <Domain name="range" id="25383.UpperThreshold.range"/>
+        </Property>
+        <Property name="UseContinuousCellRange" id="25383.UseContinuousCellRange" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="25383.UseContinuousCellRange.bool"/>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="TransformFilter" id="23625" servers="1" compound_name="Scale_Data">
+        <Property name="Input" id="23625.Input" number_of_elements="1">
+          <Domain name="groups" id="23625.Input.groups"/>
+          <Domain name="input_type" id="23625.Input.input_type"/>
+        </Property>
+        <Property name="Transform" id="23625.Transform" number_of_elements="1">
+          <Proxy value="23636"/>
+          <Domain name="groups" id="23625.Transform.groups"/>
+          <Domain name="proxy_list" id="23625.Transform.proxy_list">
+            <Proxy value="23636"/>
+            <Proxy value="23637"/>
+            <Proxy value="23638"/>
+          </Domain>
+        </Property>
+        <Property name="TransformAllInputVectors" id="23625.TransformAllInputVectors" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="23625.TransformAllInputVectors.bool"/>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="Threshold" id="24363" servers="1" compound_name="Thresholdx">
+        <Property name="AllScalars" id="24363.AllScalars" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="24363.AllScalars.bool"/>
+        </Property>
+        <Property name="ComponentMode" id="24363.ComponentMode" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="24363.ComponentMode.enum">
+            <Entry value="0" text="Selected"/>
+            <Entry value="1" text="All"/>
+            <Entry value="2" text="Any"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="24363.Input" number_of_elements="1">
+          <Proxy value="24108" output_port="0"/>
+          <Domain name="groups" id="24363.Input.groups"/>
+          <Domain name="input_array" id="24363.Input.input_array"/>
+          <Domain name="input_type" id="24363.Input.input_type"/>
+        </Property>
+        <Property name="Invert" id="24363.Invert" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="24363.Invert.bool"/>
+        </Property>
+        <Property name="LowerThreshold" id="24363.LowerThreshold" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="range" id="24363.LowerThreshold.range"/>
+        </Property>
+        <Property name="MemoryStrategy" id="24363.MemoryStrategy" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="24363.MemoryStrategy.enum">
+            <Entry value="0" text="Mask Input"/>
+            <Entry value="1" text="Regenerate Trees And Index Fields"/>
+            <Entry value="2" text="New HyperTreeGrid"/>
+          </Domain>
+        </Property>
+        <Property name="SelectInputScalars" id="24363.SelectInputScalars" number_of_elements="5">
+          <Element index="0" value="0"/>
+          <Element index="1" value="0"/>
+          <Element index="2" value="0"/>
+          <Element index="3" value="1"/>
+          <Element index="4" value="xcoordinates"/>
+          <Domain name="array_list" id="24363.SelectInputScalars.array_list">
+            <String text="Result"/>
+            <String text="Type"/>
+            <String text="xcoordinates"/>
+            <String text="ycoordinates"/>
+            <String text="zcoordinates"/>
+          </Domain>
+        </Property>
+        <Property name="SelectedComponent" id="24363.SelectedComponent" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="comps" id="24363.SelectedComponent.comps">
+            <Entry value="0" text=""/>
+          </Domain>
+        </Property>
+        <Property name="ThresholdMethod" id="24363.ThresholdMethod" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="24363.ThresholdMethod.enum">
+            <Entry value="0" text="Between"/>
+            <Entry value="1" text="Below Lower Threshold"/>
+            <Entry value="2" text="Above Upper Threshold"/>
+          </Domain>
+        </Property>
+        <Property name="UpperThreshold" id="24363.UpperThreshold" number_of_elements="1">
+          <Element index="0" value="500.00000000000006"/>
+          <Domain name="range" id="24363.UpperThreshold.range"/>
+        </Property>
+        <Property name="UseContinuousCellRange" id="24363.UseContinuousCellRange" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="24363.UseContinuousCellRange.bool"/>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="Threshold" id="24618" servers="1" compound_name="Thresholdy">
+        <Property name="AllScalars" id="24618.AllScalars" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="24618.AllScalars.bool"/>
+        </Property>
+        <Property name="ComponentMode" id="24618.ComponentMode" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="24618.ComponentMode.enum">
+            <Entry value="0" text="Selected"/>
+            <Entry value="1" text="All"/>
+            <Entry value="2" text="Any"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="24618.Input" number_of_elements="1">
+          <Proxy value="24363" output_port="0"/>
+          <Domain name="groups" id="24618.Input.groups"/>
+          <Domain name="input_array" id="24618.Input.input_array"/>
+          <Domain name="input_type" id="24618.Input.input_type"/>
+        </Property>
+        <Property name="Invert" id="24618.Invert" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="24618.Invert.bool"/>
+        </Property>
+        <Property name="LowerThreshold" id="24618.LowerThreshold" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="range" id="24618.LowerThreshold.range"/>
+        </Property>
+        <Property name="MemoryStrategy" id="24618.MemoryStrategy" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="24618.MemoryStrategy.enum">
+            <Entry value="0" text="Mask Input"/>
+            <Entry value="1" text="Regenerate Trees And Index Fields"/>
+            <Entry value="2" text="New HyperTreeGrid"/>
+          </Domain>
+        </Property>
+        <Property name="SelectInputScalars" id="24618.SelectInputScalars" number_of_elements="5">
+          <Element index="0" value="0"/>
+          <Element index="1" value="0"/>
+          <Element index="2" value="0"/>
+          <Element index="3" value="1"/>
+          <Element index="4" value="ycoordinates"/>
+          <Domain name="array_list" id="24618.SelectInputScalars.array_list">
+            <String text="Result"/>
+            <String text="Type"/>
+            <String text="xcoordinates"/>
+            <String text="ycoordinates"/>
+            <String text="zcoordinates"/>
+          </Domain>
+        </Property>
+        <Property name="SelectedComponent" id="24618.SelectedComponent" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="comps" id="24618.SelectedComponent.comps">
+            <Entry value="0" text=""/>
+          </Domain>
+        </Property>
+        <Property name="ThresholdMethod" id="24618.ThresholdMethod" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="24618.ThresholdMethod.enum">
+            <Entry value="0" text="Between"/>
+            <Entry value="1" text="Below Lower Threshold"/>
+            <Entry value="2" text="Above Upper Threshold"/>
+          </Domain>
+        </Property>
+        <Property name="UpperThreshold" id="24618.UpperThreshold" number_of_elements="1">
+          <Element index="0" value="500.00000000000006"/>
+          <Domain name="range" id="24618.UpperThreshold.range"/>
+        </Property>
+        <Property name="UseContinuousCellRange" id="24618.UseContinuousCellRange" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="24618.UseContinuousCellRange.bool"/>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="Threshold" id="24873" servers="1" compound_name="Thresholdz">
+        <Property name="AllScalars" id="24873.AllScalars" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="24873.AllScalars.bool"/>
+        </Property>
+        <Property name="ComponentMode" id="24873.ComponentMode" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="24873.ComponentMode.enum">
+            <Entry value="0" text="Selected"/>
+            <Entry value="1" text="All"/>
+            <Entry value="2" text="Any"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="24873.Input" number_of_elements="1">
+          <Proxy value="24618" output_port="0"/>
+          <Domain name="groups" id="24873.Input.groups"/>
+          <Domain name="input_array" id="24873.Input.input_array"/>
+          <Domain name="input_type" id="24873.Input.input_type"/>
+        </Property>
+        <Property name="Invert" id="24873.Invert" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="24873.Invert.bool"/>
+        </Property>
+        <Property name="LowerThreshold" id="24873.LowerThreshold" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="range" id="24873.LowerThreshold.range"/>
+        </Property>
+        <Property name="MemoryStrategy" id="24873.MemoryStrategy" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="24873.MemoryStrategy.enum">
+            <Entry value="0" text="Mask Input"/>
+            <Entry value="1" text="Regenerate Trees And Index Fields"/>
+            <Entry value="2" text="New HyperTreeGrid"/>
+          </Domain>
+        </Property>
+        <Property name="SelectInputScalars" id="24873.SelectInputScalars" number_of_elements="5">
+          <Element index="0" value="0"/>
+          <Element index="1" value="0"/>
+          <Element index="2" value="0"/>
+          <Element index="3" value="1"/>
+          <Element index="4" value="zcoordinates"/>
+          <Domain name="array_list" id="24873.SelectInputScalars.array_list">
+            <String text="Result"/>
+            <String text="Type"/>
+            <String text="xcoordinates"/>
+            <String text="ycoordinates"/>
+            <String text="zcoordinates"/>
+          </Domain>
+        </Property>
+        <Property name="SelectedComponent" id="24873.SelectedComponent" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="comps" id="24873.SelectedComponent.comps">
+            <Entry value="0" text=""/>
+          </Domain>
+        </Property>
+        <Property name="ThresholdMethod" id="24873.ThresholdMethod" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="24873.ThresholdMethod.enum">
+            <Entry value="0" text="Between"/>
+            <Entry value="1" text="Below Lower Threshold"/>
+            <Entry value="2" text="Above Upper Threshold"/>
+          </Domain>
+        </Property>
+        <Property name="UpperThreshold" id="24873.UpperThreshold" number_of_elements="1">
+          <Element index="0" value="500.00000000000006"/>
+          <Domain name="range" id="24873.UpperThreshold.range"/>
+        </Property>
+        <Property name="UseContinuousCellRange" id="24873.UseContinuousCellRange" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="24873.UseContinuousCellRange.bool"/>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="Threshold" id="24108" servers="1" compound_name="Time_Range">
+        <Property name="AllScalars" id="24108.AllScalars" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="24108.AllScalars.bool"/>
+        </Property>
+        <Property name="ComponentMode" id="24108.ComponentMode" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="24108.ComponentMode.enum">
+            <Entry value="0" text="Selected"/>
+            <Entry value="1" text="All"/>
+            <Entry value="2" text="Any"/>
+          </Domain>
+        </Property>
+        <Property name="Input" id="24108.Input" number_of_elements="1">
+          <Proxy value="23870" output_port="0"/>
+          <Domain name="groups" id="24108.Input.groups"/>
+          <Domain name="input_array" id="24108.Input.input_array"/>
+          <Domain name="input_type" id="24108.Input.input_type"/>
+        </Property>
+        <Property name="Invert" id="24108.Invert" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="24108.Invert.bool"/>
+        </Property>
+        <Property name="LowerThreshold" id="24108.LowerThreshold" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="range" id="24108.LowerThreshold.range"/>
+        </Property>
+        <Property name="MemoryStrategy" id="24108.MemoryStrategy" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="24108.MemoryStrategy.enum">
+            <Entry value="0" text="Mask Input"/>
+            <Entry value="1" text="Regenerate Trees And Index Fields"/>
+            <Entry value="2" text="New HyperTreeGrid"/>
+          </Domain>
+        </Property>
+        <Property name="SelectInputScalars" id="24108.SelectInputScalars" number_of_elements="5">
+          <Element index="0" value="0"/>
+          <Element index="1" value="0"/>
+          <Element index="2" value="0"/>
+          <Element index="3" value="0"/>
+          <Element index="4" value="Result"/>
+          <Domain name="array_list" id="24108.SelectInputScalars.array_list">
+            <String text="Result"/>
+            <String text="Type"/>
+            <String text="xcoordinates"/>
+            <String text="ycoordinates"/>
+            <String text="zcoordinates"/>
+          </Domain>
+        </Property>
+        <Property name="SelectedComponent" id="24108.SelectedComponent" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="comps" id="24108.SelectedComponent.comps">
+            <Entry value="0" text=""/>
+          </Domain>
+        </Property>
+        <Property name="ThresholdMethod" id="24108.ThresholdMethod" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="24108.ThresholdMethod.enum">
+            <Entry value="0" text="Between"/>
+            <Entry value="1" text="Below Lower Threshold"/>
+            <Entry value="2" text="Above Upper Threshold"/>
+          </Domain>
+        </Property>
+        <Property name="UpperThreshold" id="24108.UpperThreshold" number_of_elements="1">
+          <Element index="0" value="500.00000000000006"/>
+          <Domain name="range" id="24108.UpperThreshold.range"/>
+        </Property>
+        <Property name="UseContinuousCellRange" id="24108.UseContinuousCellRange" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="24108.UseContinuousCellRange.bool"/>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="TubeFilter" id="26612" servers="1" compound_name="Tube1">
+        <Property name="Capping" id="26612.Capping" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="26612.Capping.bool"/>
+        </Property>
+        <Property name="DefaultNormal" id="26612.DefaultNormal" number_of_elements="3">
+          <Element index="0" value="0"/>
+          <Element index="1" value="0"/>
+          <Element index="2" value="1"/>
+          <Domain name="range" id="26612.DefaultNormal.range"/>
+        </Property>
+        <Property name="Input" id="26612.Input" number_of_elements="1">
+          <Proxy value="25896" output_port="0"/>
+          <Domain name="groups" id="26612.Input.groups"/>
+          <Domain name="input_array1" id="26612.Input.input_array1"/>
+          <Domain name="input_array2" id="26612.Input.input_array2"/>
+          <Domain name="input_type" id="26612.Input.input_type"/>
+        </Property>
+        <Property name="NumberOfSides" id="26612.NumberOfSides" number_of_elements="1">
+          <Element index="0" value="6"/>
+          <Domain name="range" id="26612.NumberOfSides.range"/>
+        </Property>
+        <Property name="Radius" id="26612.Radius" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bounds" id="26612.Radius.bounds"/>
+        </Property>
+        <Property name="RadiusFactor" id="26612.RadiusFactor" number_of_elements="1">
+          <Element index="0" value="10"/>
+          <Domain name="range" id="26612.RadiusFactor.range"/>
+        </Property>
+        <Property name="SelectInputScalars" id="26612.SelectInputScalars" number_of_elements="5">
+          <Element index="0" value=""/>
+          <Element index="1" value=""/>
+          <Element index="2" value=""/>
+          <Element index="3" value="0"/>
+          <Element index="4" value="Result"/>
+          <Domain name="array_list" id="26612.SelectInputScalars.array_list">
+            <String text="Result"/>
+          </Domain>
+        </Property>
+        <Property name="SelectInputVectors" id="26612.SelectInputVectors" number_of_elements="5">
+          <Element index="0" value="1"/>
+          <Element index="1" value=""/>
+          <Element index="2" value=""/>
+          <Element index="3" value="0"/>
+          <Element index="4" value="1"/>
+          <Domain name="array_list" id="26612.SelectInputVectors.array_list"/>
+        </Property>
+        <Property name="UseDefaultNormal" id="26612.UseDefaultNormal" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="26612.UseDefaultNormal.bool"/>
+        </Property>
+        <Property name="VaryRadius" id="26612.VaryRadius" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="26612.VaryRadius.enum">
+            <Entry value="0" text="Off"/>
+            <Entry value="1" text="By Scalar"/>
+            <Entry value="2" text="By Vector"/>
+            <Entry value="3" text="By Absolute Scalar"/>
+            <Entry value="4" text="By Vector Norm"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="TubeFilter" id="26852" servers="1" compound_name="Tube2">
+        <Property name="Capping" id="26852.Capping" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="26852.Capping.bool"/>
+        </Property>
+        <Property name="DefaultNormal" id="26852.DefaultNormal" number_of_elements="3">
+          <Element index="0" value="0"/>
+          <Element index="1" value="0"/>
+          <Element index="2" value="1"/>
+          <Domain name="range" id="26852.DefaultNormal.range"/>
+        </Property>
+        <Property name="Input" id="26852.Input" number_of_elements="1">
+          <Proxy value="26135" output_port="0"/>
+          <Domain name="groups" id="26852.Input.groups"/>
+          <Domain name="input_array1" id="26852.Input.input_array1"/>
+          <Domain name="input_array2" id="26852.Input.input_array2"/>
+          <Domain name="input_type" id="26852.Input.input_type"/>
+        </Property>
+        <Property name="NumberOfSides" id="26852.NumberOfSides" number_of_elements="1">
+          <Element index="0" value="6"/>
+          <Domain name="range" id="26852.NumberOfSides.range"/>
+        </Property>
+        <Property name="Radius" id="26852.Radius" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bounds" id="26852.Radius.bounds"/>
+        </Property>
+        <Property name="RadiusFactor" id="26852.RadiusFactor" number_of_elements="1">
+          <Element index="0" value="10"/>
+          <Domain name="range" id="26852.RadiusFactor.range"/>
+        </Property>
+        <Property name="SelectInputScalars" id="26852.SelectInputScalars" number_of_elements="5">
+          <Element index="0" value=""/>
+          <Element index="1" value=""/>
+          <Element index="2" value=""/>
+          <Element index="3" value="0"/>
+          <Element index="4" value="Result"/>
+          <Domain name="array_list" id="26852.SelectInputScalars.array_list">
+            <String text="Result"/>
+          </Domain>
+        </Property>
+        <Property name="SelectInputVectors" id="26852.SelectInputVectors" number_of_elements="5">
+          <Element index="0" value="1"/>
+          <Element index="1" value=""/>
+          <Element index="2" value=""/>
+          <Element index="3" value="0"/>
+          <Element index="4" value="1"/>
+          <Domain name="array_list" id="26852.SelectInputVectors.array_list"/>
+        </Property>
+        <Property name="UseDefaultNormal" id="26852.UseDefaultNormal" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="26852.UseDefaultNormal.bool"/>
+        </Property>
+        <Property name="VaryRadius" id="26852.VaryRadius" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="26852.VaryRadius.enum">
+            <Entry value="0" text="Off"/>
+            <Entry value="1" text="By Scalar"/>
+            <Entry value="2" text="By Vector"/>
+            <Entry value="3" text="By Absolute Scalar"/>
+            <Entry value="4" text="By Vector Norm"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="filters" type="TubeFilter" id="27091" servers="1" compound_name="Tube3">
+        <Property name="Capping" id="27091.Capping" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bool" id="27091.Capping.bool"/>
+        </Property>
+        <Property name="DefaultNormal" id="27091.DefaultNormal" number_of_elements="3">
+          <Element index="0" value="0"/>
+          <Element index="1" value="0"/>
+          <Element index="2" value="1"/>
+          <Domain name="range" id="27091.DefaultNormal.range"/>
+        </Property>
+        <Property name="Input" id="27091.Input" number_of_elements="1">
+          <Proxy value="26374" output_port="0"/>
+          <Domain name="groups" id="27091.Input.groups"/>
+          <Domain name="input_array1" id="27091.Input.input_array1"/>
+          <Domain name="input_array2" id="27091.Input.input_array2"/>
+          <Domain name="input_type" id="27091.Input.input_type"/>
+        </Property>
+        <Property name="NumberOfSides" id="27091.NumberOfSides" number_of_elements="1">
+          <Element index="0" value="6"/>
+          <Domain name="range" id="27091.NumberOfSides.range"/>
+        </Property>
+        <Property name="Radius" id="27091.Radius" number_of_elements="1">
+          <Element index="0" value="1"/>
+          <Domain name="bounds" id="27091.Radius.bounds"/>
+        </Property>
+        <Property name="RadiusFactor" id="27091.RadiusFactor" number_of_elements="1">
+          <Element index="0" value="10"/>
+          <Domain name="range" id="27091.RadiusFactor.range"/>
+        </Property>
+        <Property name="SelectInputScalars" id="27091.SelectInputScalars" number_of_elements="5">
+          <Element index="0" value=""/>
+          <Element index="1" value=""/>
+          <Element index="2" value=""/>
+          <Element index="3" value="0"/>
+          <Element index="4" value="Result"/>
+          <Domain name="array_list" id="27091.SelectInputScalars.array_list">
+            <String text="Result"/>
+          </Domain>
+        </Property>
+        <Property name="SelectInputVectors" id="27091.SelectInputVectors" number_of_elements="5">
+          <Element index="0" value="1"/>
+          <Element index="1" value=""/>
+          <Element index="2" value=""/>
+          <Element index="3" value="0"/>
+          <Element index="4" value="1"/>
+          <Domain name="array_list" id="27091.SelectInputVectors.array_list"/>
+        </Property>
+        <Property name="UseDefaultNormal" id="27091.UseDefaultNormal" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="bool" id="27091.UseDefaultNormal.bool"/>
+        </Property>
+        <Property name="VaryRadius" id="27091.VaryRadius" number_of_elements="1">
+          <Element index="0" value="0"/>
+          <Domain name="enum" id="27091.VaryRadius.enum">
+            <Entry value="0" text="Off"/>
+            <Entry value="1" text="By Scalar"/>
+            <Entry value="2" text="By Vector"/>
+            <Entry value="3" text="By Absolute Scalar"/>
+            <Entry value="4" text="By Vector Norm"/>
+          </Domain>
+        </Property>
+      </Proxy>
+      <Proxy group="extended_sources" type="Transform3" id="23636" servers="21" compound_name="auto_23636">
+        <Property name="Position" id="23636.Position" number_of_elements="3">
+          <Element index="0" value="0"/>
+          <Element index="1" value="0"/>
+          <Element index="2" value="0"/>
+          <Domain name="range" id="23636.Position.range"/>
+        </Property>
+        <Property name="PositionInfo" id="23636.PositionInfo" number_of_elements="3">
+          <Element index="0" value="0"/>
+          <Element index="1" value="0"/>
+          <Element index="2" value="0"/>
+        </Property>
+        <Property name="Rotation" id="23636.Rotation" number_of_elements="3">
+          <Element index="0" value="0"/>
+          <Element index="1" value="0"/>
+          <Element index="2" value="0"/>
+          <Domain name="range" id="23636.Rotation.range"/>
+        </Property>
+        <Property name="RotationInfo" id="23636.RotationInfo" number_of_elements="3">
+          <Element index="0" value="0"/>
+          <Element index="1" value="0"/>
+          <Element index="2" value="0"/>
+        </Property>
+        <Property name="Scale" id="23636.Scale" number_of_elements="3">
+          <Element index="0" value="2.962"/>
+          <Element index="1" value="427.3744192900953"/>
+          <Element index="2" value="1"/>
+          <Domain name="range" id="23636.Scale.range"/>
+        </Property>
+        <Property name="ScaleInfo" id="23636.ScaleInfo" number_of_elements="3">
+          <Element index="0" value="1"/>
+          <Element index="1" value="1"/>
+          <Element index="2" value="1"/>
+        </Property>
+      </Proxy>
+      <ExposedProperties>
+        <Property name="Function" proxy_name="Calculator1" exposed_name="Function"/>
+        <Property name="Input" proxy_name="Scale_Data" exposed_name="Input"/>
+        <Property name="Transform" proxy_name="Scale_Data" exposed_name="Transform"/>
+        <Property name="UpperThreshold" proxy_name="Time_Range" exposed_name="t_max"/>
+        <Property name="LowerThreshold" proxy_name="Time_Range" exposed_name="t_min"/>
+        <Property name="UpperThreshold" proxy_name="Thresholdx" exposed_name="x_max"/>
+        <Property name="LowerThreshold" proxy_name="Thresholdx" exposed_name="x_min"/>
+        <Property name="UpperThreshold" proxy_name="Thresholdy" exposed_name="y_max"/>
+        <Property name="LowerThreshold" proxy_name="Thresholdy" exposed_name="y_min"/>
+        <Property name="UpperThreshold" proxy_name="Thresholdz" exposed_name="z_max"/>
+        <Property name="LowerThreshold" proxy_name="Thresholdz" exposed_name="z_min"/>
+      </ExposedProperties>
+      <OutputPort name="Minimum" proxy="Tube1" port_index="0"/>
+      <OutputPort name="Saddle" proxy="Tube2" port_index="0"/>
+      <OutputPort name="Maximum" proxy="Tube3" port_index="0"/>
+      <Hints>
+        <ShowInMenu/>
+      </Hints>
+    </CompoundSourceProxy>
+  </CustomProxyDefinition>
+</CustomFilterDefinitions>
