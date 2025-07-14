@@ -1,0 +1,106 @@
+﻿GRAPHING AND QUERYING CERF DIAGRAM DATA (DOCUMENTATION)
+SHASHI VALLABH MAKKAPATI
+INSTALLATION
+* The project was run and tested on Paraview 5.13.2
+* Install module pyvista on Python
+* Import the macros on the Macros folder using Tools->Manage Macros on Paraview
+* Import the custom filter “tube_2dim.cpd” using Tools->Manage Custom Filters
+
+
+
+
+CREATING VTP FILE FROM GIVEN DATA
+Raw data was given of this form in a .txt file.
+  
+
+
+First four columns are of the form x1 y1 x2 y2.
+Coordinate Points (x1,y1) and (x2,y2) are to be joined using a line segment of a specific colour(designated to a critical point type)
+Fifth column designates the index of the critical point.
+Sixth column is the vertexID which denotes the row number of the coordinates off-file.
+
+
+User also inputs an off file that contains the coordinates of the simplicial complex. Off file must be of the form:
+  
+
+First line first column denotes the row upto which the coordinates are stored, after which other information of the simplicial complex is stored.
+Solution
+A python code was made to read a text file and generate a vtp file using the python module pyvista.
+
+
+File name: VTP_creation_from_txt/vtp_creation_with offile
+
+
+Alternately one can use  VTP_creation_from_txt/vtp_from_txt_file.py if they don't have access to the off-file
+
+
+User inputs the text file and off file path in quotes.
+A vtp file is created in the same file directory as the text file .Vtp file contains the data in raw form but can be opened in paraview.
+
+
+ADDING FILTERS TO MAKE VTP FILE EASILY READABLE
+
+
+The previously created vtp file opens without apt scaling,black background and unsuitable colour. So we apply scaling transform,colour maps and axis grid using the paraview GUI after opening the file.
+
+
+Solution
+Required filters were traced and written into a .py python file.This .py file is run using 
+” Run Script” on Paraview Python Shell. After running the file on paraview, user input is asked for the file path of the vtp file(in quotes).
+File Names:
+1. VTP_cerf_viewers/2dim_custom_vtp_viewer for 2 dimensional data
+2. VTP_cerf_viewers/view_multi_dim_vtp.py
+3. VTP_cerf_viewers/view_vtp_without_off.py if user doesn't have off-file
+
+
+TIME RANGE QUERYING 
+If we want to view only some part of the Cerf Diagram or a given time interval. 
+Desired Output
+  
+
+Solution
+Select the Time_Range object which has been created, slide the lower and upper threshold to view the desired time range,click “Apply”.
+
+
+VIEWING SELECTED CRITICAL POINTS
+
+
+Suppose we want to view only some of the critical points(Example: only minima and saddle).The remaining critical points must be hidden out of view.
+Solution:
+User can click on the “eye icons” next to the desired critical points to view them.
+  
+
+
+
+VIEWING CERF DIAGRAM PERTAINING TO A CUBOIDAL VOLUME IN SPACE
+
+
+If we want to view only the cerf edges which correspond to a x_range,y_range and z range, we can use the sliders of the custom filter.
+
+
+
+
+VIEWING BIRTH AND DEATH POINTS
+In this context we consider points from which two different critical types emanate as birth points.
+Death points are points at which two critical point type meet and stop.
+
+
+Solution: User runs a python file and user input is asked for the txt cerf file. A macro python file is be used to display the birth or death points.
+
+
+Creation of birth and death points: Queries/vtp_create_birth_death_points.py
+(Vtp files for birth and death will be created in the same folder as the txt file)
+Viewing them on Paraview: Macros/birth_death_displayer
+VIEWING CERF TRACKS GIVEN A POINT ON THE CERF DIAGRAM
+TF DOMAIN
+User selects a point on the cerf diagram and the track on which the point lies is displayed.
+1. Click on 'Select points on' icon in the toolbar just above the Render view
+2. Select a rectangle enclosing the point whose cerf track is desired
+3. Go to View->Find data to get the coordinate of the point
+4. Run Queries/create_track_TF_domain.py
+5. Enter coordinate and txt file path
+6. Run Macros/view_cerf_track.py and enter the vtp file that has been created in the same directory as the text file
+T-SPACE DOMAIN
+This query helps view all cerf tracks passing through a cuboidal space and given time range
+* Run Queries/create_track_cuboid_time_range and input the bounds and time range
+* Then run Macros/view_cerf_track.py , track vtp would be created in the same directory as the text file
